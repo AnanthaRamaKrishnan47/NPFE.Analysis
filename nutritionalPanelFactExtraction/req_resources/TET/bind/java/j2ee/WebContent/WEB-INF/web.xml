@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>tet-j2ee-samples</display-name>
+	<servlet>
+		<description>TET sample servlet for dumping PDF information with pCOS.</description>
+		<display-name>DumperServlet</display-name>
+		<servlet-name>DumperServlet</servlet-name>
+		<servlet-class>
+		DumperServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>Demonstrates extraction of plain text from input document &quot;TET-datasheet.pdf&quot;.</description>
+		<display-name>ExtractorServlet</display-name>
+		<servlet-name>ExtractorServlet</servlet-name>
+		<servlet-class>
+		ExtractorServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>Extract text from PDF and filter according to font name and size.</description>
+		<display-name>FontfilterServlet</display-name>
+		<servlet-name>FontfilterServlet</servlet-name>
+		<servlet-class>
+		FontfilterServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>Simple PDF glyph dumper servlet based on PDFlib TET.</description>
+		<display-name>GlyphinfoServlet</display-name>
+		<servlet-name>GlyphinfoServlet</servlet-name>
+		<servlet-class>
+		GlyphinfoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>Extract text from PDF document as XML.</description>
+		<display-name>TetmlServlet</display-name>
+		<servlet-name>TetmlServlet</servlet-name>
+		<servlet-class>
+		TetmlServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>On-the-fly transformation of PDF to HTML.</description>
+		<display-name>Tetml2HtmlServlet</display-name>
+		<servlet-name>Tetml2HtmlServlet</servlet-name>
+		<servlet-class>
+		Tetml2HtmlServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DumperServlet</servlet-name>
+		<url-pattern>/DumperServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ExtractorServlet</servlet-name>
+		<url-pattern>/ExtractorServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FontfilterServlet</servlet-name>
+		<url-pattern>/FontfilterServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GlyphinfoServlet</servlet-name>
+		<url-pattern>/GlyphinfoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TetmlServlet</servlet-name>
+		<url-pattern>/TetmlServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Tetml2HtmlServlet</servlet-name>
+		<url-pattern>/Tetml2HtmlServlet</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

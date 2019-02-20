@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     $Id: build.xml,v 1.1 2010/06/23 09:17:45 stm Exp $       
+     
+     Important: Before this Ant file can be used to create the WAR file
+     please configure the "servlet.jar" property with the path to the
+     Servlet API JAR file.
+     
+     Some examples where to find the Servlet API JAR file:
+     
+     Tomcat: <tomcat-install-dir>/lib/servlet-api.jar
+     Jetty: <jetty-install-dir>/lib/servlet-api-<version-id>.jar
+     Glassfish: <glassfish-install-dir>/lib/javaee.jar
+     ====================================================================== -->
+<project name="tet-j2ee-samples" default="war">
+	<description>Build a deployable WAR file for the TET J2EE servlet samples</description>
+
+	<property name="war.file" value="${ant.project.name}.war" />
+	<property name="bin.dir" location="build/classes" />
+	<property name="content.dir" location="WebContent" />
+	<property name="tet.data.dir" location="../.." />
+	<property name="tet.resource.dir" location="../../.." />
+        <property name="tet.xslt.dir" location="../../xslt" />
+	<property name="tet.jar" location="../TET.jar" />
+	<property name="src.dir" location="src" />
+
+	<!-- Configure the servlet.jar property with the path to the Servlet API JAR file -->
+	<property name="servlet.jar" location=".../servlet-api.jar" />
+
+	<path id="project.class.path">
+		<pathelement location="${tet.jar}" />
+		<pathelement path="${bin.dir}" />
+		<pathelement path="${servlet.jar}" />
+	</path>
+
+	<target name="war" depends="setup,compile">
+		<war destfile="${war.file}" webxml="${content.dir}/WEB-INF/web.xml">
+			<fileset dir="${content.dir}" >
+				<exclude name="WEB-INF/**" />
+				<exclude name="META-INF/**" />
+			</fileset>
+			<classes dir="${bin.dir}" />
+			<webinf dir="${tet.data.dir}" includes="data/**" />
+			<webinf dir="${tet.resource.dir}" includes="resource/**" />
+			<webinf file="${tet.xslt.dir}/tetml2html.xsl" />
+		</war>
+	</target>
+
+	<target name="compile">
+		<mkdir dir="${bin.dir}" />
+		<javac destdir="${bin.dir}">
+			<classpath refid="project.class.path" />
+			<src path="${src.dir}" />
+		</javac>
+	</target>
+
+	<target name="setup">
+		<fail message="Please configure the path to the Servlet API JAR file in property 'servlet.jar'">
+			<condition>
+				<not>
+					<available file="${servlet.jar}" />
+				</not>
+			</condition>
+		</fail>
+	</target>
+
+	<target name="clean">
+		<delete dir="${bin.dir}" />
+		<delete file="${war.file}" />
+	</target>
+</project>

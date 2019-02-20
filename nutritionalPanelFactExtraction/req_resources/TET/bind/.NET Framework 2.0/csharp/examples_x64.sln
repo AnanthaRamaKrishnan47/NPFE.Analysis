@@ -1,0 +1,57 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dumper", "VS2005_x64\dumper.csproj", "{89F9107C-1873-41CB-A4B7-FFC61119E975}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "extractor", "VS2005_x64\extractor.csproj", "{8AB5D631-66F2-488A-9F73-6E18D6CBDA96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "images_per_page", "VS2005_x64\images_per_page.csproj", "{3AB60C75-07A3-47A6-9393-DCF224C3EB5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fontfilter", "VS2005_x64\fontfilter.csproj", "{7C63DEF1-DB3B-4B96-8D7E-015CBD5335AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "get_attachments", "VS2005_x64\get_attachments.csproj", "{7C63DEF1-DB3B-4B96-8D7E-015CBD5335AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "glyphinfo", "VS2005_x64\glyphinfo.csproj", "{895CC590-62D0-499D-8AFC-8DF86A18A372}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "image_resources", "VS2005_x64\image_resources.csproj", "{0BD5A388-BC59-4920-ABE6-AAB785D94930}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tetml", "VS2005_x64\tetml.csproj", "{28A18EFD-AABC-4CC9-88A0-46CDFB8DDAF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89F9107C-1873-41CB-A4B7-FFC61119E975}.Debug|x64.ActiveCfg = Debug|x64
+		{89F9107C-1873-41CB-A4B7-FFC61119E975}.Debug|x64.Build.0 = Debug|x64
+		{89F9107C-1873-41CB-A4B7-FFC61119E975}.Release|x64.ActiveCfg = Release|x64
+		{89F9107C-1873-41CB-A4B7-FFC61119E975}.Release|x64.Build.0 = Release|x64
+		{8AB5D631-66F2-488A-9F73-6E18D6CBDA96}.Debug|x64.ActiveCfg = Debug|x64
+		{8AB5D631-66F2-488A-9F73-6E18D6CBDA96}.Debug|x64.Build.0 = Debug|x64
+		{8AB5D631-66F2-488A-9F73-6E18D6CBDA96}.Release|x64.ActiveCfg = Release|x64
+		{8AB5D631-66F2-488A-9F73-6E18D6CBDA96}.Release|x64.Build.0 = Release|x64
+		{3AB60C75-07A3-47A6-9393-DCF224C3EB5A}.Debug|x64.ActiveCfg = Debug|x64
+		{3AB60C75-07A3-47A6-9393-DCF224C3EB5A}.Debug|x64.Build.0 = Debug|x64
+		{3AB60C75-07A3-47A6-9393-DCF224C3EB5A}.Release|x64.ActiveCfg = Release|x64
+		{3AB60C75-07A3-47A6-9393-DCF224C3EB5A}.Release|x64.Build.0 = Release|x64
+		{7C63DEF1-DB3B-4B96-8D7E-015CBD5335AE}.Debug|x64.ActiveCfg = Debug|x64
+		{7C63DEF1-DB3B-4B96-8D7E-015CBD5335AE}.Debug|x64.Build.0 = Debug|x64
+		{7C63DEF1-DB3B-4B96-8D7E-015CBD5335AE}.Release|x64.ActiveCfg = Release|x64
+		{7C63DEF1-DB3B-4B96-8D7E-015CBD5335AE}.Release|x64.Build.0 = Release|x64
+		{895CC590-62D0-499D-8AFC-8DF86A18A372}.Debug|x64.ActiveCfg = Debug|x64
+		{895CC590-62D0-499D-8AFC-8DF86A18A372}.Debug|x64.Build.0 = Debug|x64
+		{895CC590-62D0-499D-8AFC-8DF86A18A372}.Release|x64.ActiveCfg = Release|x64
+		{895CC590-62D0-499D-8AFC-8DF86A18A372}.Release|x64.Build.0 = Release|x64
+		{0BD5A388-BC59-4920-ABE6-AAB785D94930}.Debug|x64.ActiveCfg = Debug|x64
+		{0BD5A388-BC59-4920-ABE6-AAB785D94930}.Debug|x64.Build.0 = Debug|x64
+		{0BD5A388-BC59-4920-ABE6-AAB785D94930}.Release|x64.ActiveCfg = Release|x64
+		{0BD5A388-BC59-4920-ABE6-AAB785D94930}.Release|x64.Build.0 = Release|x64
+		{28A18EFD-AABC-4CC9-88A0-46CDFB8DDAF0}.Debug|x64.ActiveCfg = Debug|x64
+		{28A18EFD-AABC-4CC9-88A0-46CDFB8DDAF0}.Debug|x64.Build.0 = Debug|x64
+		{28A18EFD-AABC-4CC9-88A0-46CDFB8DDAF0}.Release|x64.ActiveCfg = Release|x64
+		{28A18EFD-AABC-4CC9-88A0-46CDFB8DDAF0}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     Ant build file for TET Java sample programs.
+     
+     Requires Ant 1.6 or newer.
+     
+     $Id: build.xml,v 1.5 2015/07/22 09:38:59 rp Exp $                    
+     ====================================================================== -->
+<project name="tet-java-samples" default="run">
+
+	<description>Ant build file for TET Java sample programs</description>
+
+	<property name="bin.dir" value="bin" />
+	<property name="src.dir" value="${basedir}" />
+
+	<path id="project.class.path">
+		<pathelement location="TET.jar" />
+		<pathelement path="${bin.dir}" />
+	</path>
+
+	<macrodef name="runsample" description="TET 'name'">
+		<attribute name="name" />
+		<element name="javaargs" optional="yes"/>
+		<sequential>
+			<echo message="@{name}" />
+			<java classname="@{name}" fork="true">
+				<classpath refid="project.class.path" />
+				<sysproperty key="java.library.path" path="${basedir}:${basedir}/.libs" />
+				<javaargs/>
+			</java>
+		</sequential>
+	</macrodef>
+
+	<target name="run" depends="compile">
+		<runsample name="dumper">
+			<javaargs>
+				<arg value="TET-datasheet.pdf" />
+			</javaargs>
+		</runsample>
+		<runsample name="extractor">
+        		<javaargs>
+        			<arg value="TET-datasheet.pdf" />
+        			<arg value="TET-datasheet.txt" />
+        		</javaargs>
+		</runsample>
+		<runsample name="fontfilter">
+			<javaargs>
+                                <arg value="TET-datasheet.pdf" />
+                        </javaargs>
+                </runsample>
+		<runsample name="get_attachments">
+                        <javaargs>
+                                <arg value="Portfolio_sample.pdf" />
+                                <arg value="attachments.txt" />
+                        </javaargs>
+                </runsample>
+		<runsample name="glyphinfo">
+                        <javaargs>
+                                <arg value="TET-datasheet.pdf" />
+                                <arg value="TET-datasheet.info.txt" />
+                        </javaargs>
+                </runsample>
+		<runsample name="images_per_page">
+                        <javaargs>
+                                <arg value="TET-datasheet.pdf" />
+                        </javaargs>
+                </runsample>
+		<runsample name="image_resources">
+                        <javaargs>
+                                <arg value="TET-datasheet.pdf" />
+                        </javaargs>
+                </runsample>
+                <runsample name="tetml">
+                        <javaargs>
+                                <arg value="TET-datasheet.pdf" />
+                                <arg value="TET-datasheet.tetml" />
+                        </javaargs>
+                </runsample>
+	</target>
+
+	<target name="compile">
+		<mkdir dir="${bin.dir}" />
+		<javac destdir="${bin.dir}">
+			<classpath refid="project.class.path" />
+			<src path="${src.dir}" />
+			<exclude name="j2ee/**" />
+		</javac>
+	</target>
+
+	<target name="clean">
+		<delete dir="${bin.dir}" />
+		<delete file="TET-datasheet.txt" />
+		<delete file="attachments.txt" />
+		<delete file="TET-datasheet.tetml" />
+		<delete file="TET-datasheet.info.txt" />
+		<delete file="TET-datasheet_*.tif" />
+		<delete file="TET-datasheet_*.jpeg" />
+		<delete file="dumper.class" />
+		<delete file="extractor.class" />
+		<delete file="get_attachments.class" />
+		<delete file="glyphinfo.class" />
+		<delete file="image_resources.class" />
+		<delete file="tetml$1.class" />
+		<delete file="tetml$sax_handler.class" />
+		<delete file="tetml.class" />
+		<delete>
+		  <fileset dir=".">
+		    <include name="TET-datasheet_*.tif"/>
+		    <include name="TET-datasheet_*.jpg"/>
+		  </fileset>
+		</delete>
+	</target>
+</project>

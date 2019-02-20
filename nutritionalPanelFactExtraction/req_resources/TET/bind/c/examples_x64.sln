@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dumper", "VS2010_x64\dumper.vcxproj", "{CA1DC4B4-550F-4A07-9A33-C59093FA9E20}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "extractor", "VS2010_x64\extractor.vcxproj", "{CA1DC4B4-550F-4A07-9A33-C59093FA9E21}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "extractordl", "VS2010_x64\extractordl.vcxproj", "{7960A495-2F00-4B0A-92BD-A37C0E4B1A58}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fontfilter", "VS2010_x64\fontfilter.vcxproj", "{BF3ABF6A-AAC2-4C06-B340-FB4E92E23D87}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "image_resources", "VS2010_x64\image_resources.vcxproj", "{F88B076C-2B66-464F-BF37-48915B054B41}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "images_per_page", "VS2010_x64\images_per_page.vcxproj", "{F88B076C-2B66-464F-BF37-48915B054B41}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glyphinfo", "VS2010_x64\glyphinfo.vcxproj", "{F88B076C-2B66-464F-BF37-48915B054B41}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tetml", "VS2010_x64\tetml.vcxproj", "{2E6012DC-3030-4201-8692-355FF4D823E2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "get_attachments", "VS2010_x64\get_attachments.vcxproj", "{2E6012DC-3030-4201-8692-355FF4D823E2}"
+EndProject
